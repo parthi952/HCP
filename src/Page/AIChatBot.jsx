@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import  { useState, useRef, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { Send, Bot, User, Wand2 } from 'lucide-react';
 import { analyzeInteractionPrompt } from '../Redux/hcpSlice';
@@ -39,6 +39,7 @@ export const AIChatBot = () => {
       }
 
       setMessages((prev) => [...prev, { sender: 'bot', text: botResponse }]);
+    // eslint-disable-next-line no-unused-vars
     } catch (error) {
       setMessages((prev) => [...prev, { sender: 'bot', text: "Sorry, there was an error analyzing your input. Please try again." }]);
     } finally {
@@ -67,7 +68,7 @@ export const AIChatBot = () => {
               className={`flex gap-4 max-w-[85%] ${msg.sender === 'user' ? 'ml-auto flex-row-reverse' : ''}`}
             >
               <div 
-                className={`flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center shadow-sm ${
+                className={`shrink-0 w-10 h-10 rounded-full flex items-center justify-center shadow-sm ${
                   msg.sender === 'user' ? 'bg-gray-200 text-gray-600' : 'bg-teal-600 text-white'
                 }`}
               >
@@ -88,7 +89,7 @@ export const AIChatBot = () => {
           
           {loading && (
             <div className="flex gap-4 max-w-[85%]">
-              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-teal-600 text-white flex items-center justify-center shadow-sm">
+              <div className="shrink-0 w-10 h-10 rounded-full bg-teal-600 text-white flex items-center justify-center shadow-sm">
                 <Bot className="w-5 h-5" />
               </div>
               <div className="bg-white border border-gray-100 p-5 rounded-2xl rounded-tl-none shadow-sm flex items-center gap-2">

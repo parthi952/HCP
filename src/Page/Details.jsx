@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { InputField } from '../Components/InputFeild';
 import { DateSelector } from '../Components/DateSelector';
@@ -34,6 +34,7 @@ export const Detailss = () => {
   useEffect(() => {
     if (extractedData) {
       if (extractedData.hcp_name && !hcpOptions.find(o => o.value.toLowerCase() === extractedData.hcp_name.toLowerCase())) {
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         setHcpOptions(prev => [...prev, { label: extractedData.hcp_name, value: extractedData.hcp_name }]);
       }
 
@@ -52,7 +53,7 @@ export const Detailss = () => {
         follow_up_actions: extractedData.follow_up_actions || prev.follow_up_actions,
       }));
     }
-  }, [extractedData]);
+  }, [extractedData, hcpOptions]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;

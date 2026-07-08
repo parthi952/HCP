@@ -1,7 +1,7 @@
-import { Outlet, useOutlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 
 export default function RootLayout() {
-  const outlet = useOutlet();
+
   
   return (
     <div>

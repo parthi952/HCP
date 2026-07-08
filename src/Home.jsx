@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { AIChatBot } from './Page/AIChatBot'
 import { Detailss } from './Page/Details'
 
