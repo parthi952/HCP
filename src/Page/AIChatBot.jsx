@@ -23,8 +23,6 @@ export const AIChatBot = () => {
   const handleSendMessage = async (e) => {
     e.preventDefault();
     if (!input.trim() || loading) return;
-
-    // Add user message
     const userMsg = { sender: 'user', text: input };
     setMessages((prev) => [...prev, userMsg]);
     setInput('');

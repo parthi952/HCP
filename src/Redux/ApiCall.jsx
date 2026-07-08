@@ -1,14 +1,14 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: 'http://127.0.0.1:8000/api/hcp', // Base URL for the HCP routes
+  baseURL: 'http://127.0.0.1:8000/api/hcp', 
 });
 
 const AI_API = axios.create({
-  baseURL: 'http://127.0.0.1:8000/api/ai', // Base URL for the AI routes
+  baseURL: 'http://127.0.0.1:8000/api/ai', 
 });
 
-// GET: Analyze natural language prompt
+
 export const analyzePrompt = async (prompt) => {
   try {
     const response = await AI_API.get('/analyze-data', { params: { prompt } });
@@ -19,7 +19,7 @@ export const analyzePrompt = async (prompt) => {
   }
 };
 
-// POST: Create a new interaction
+
 export const createInteraction = async (interactionData) => {
   try {
     const response = await API.post('/interaction', interactionData);
@@ -31,7 +31,7 @@ export const createInteraction = async (interactionData) => {
 };
 
 
-// GET: Fetch all interactions
+
 export const getAllInteractions = async () => {
   try {
     const response = await API.get('/interaction');
@@ -42,7 +42,7 @@ export const getAllInteractions = async () => {
   }
 };
 
-// GET: Fetch a single interaction by ID
+
 export const getInteractionById = async (id) => {
   try {
     const response = await API.get(`/interaction/${id}`);
@@ -53,7 +53,7 @@ export const getInteractionById = async (id) => {
   }
 };
 
-// PUT: Update an existing interaction
+
 export const updateInteraction = async (id, interactionData) => {
   try {
     const response = await API.put(`/interaction/${id}`, interactionData);
@@ -64,7 +64,7 @@ export const updateInteraction = async (id, interactionData) => {
   }
 };
 
-// DELETE: Delete an interaction
+
 export const deleteInteraction = async (id) => {
   try {
     const response = await API.delete(`/interaction/${id}`);

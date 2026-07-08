@@ -4,7 +4,7 @@ import { InputField } from '../Components/InputFeild';
 import { DateSelector } from '../Components/DateSelector';
 import { Select } from '../Components/Select';
 import { Button } from '../Components/Button';
-import { Save, Send, Mic, Search, Plus } from 'lucide-react';
+import { Send, Mic, Search, Plus } from 'lucide-react';
 import { submitInteraction } from '../Redux/hcpSlice';
 
 export const Detailss = () => {
@@ -33,7 +33,6 @@ export const Detailss = () => {
 
   useEffect(() => {
     if (extractedData) {
-      // If AI extracted an HCP name that isn't in our list, add it so the Dropdown can display it!
       if (extractedData.hcp_name && !hcpOptions.find(o => o.value.toLowerCase() === extractedData.hcp_name.toLowerCase())) {
         setHcpOptions(prev => [...prev, { label: extractedData.hcp_name, value: extractedData.hcp_name }]);
       }

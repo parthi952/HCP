@@ -57,22 +57,20 @@ const hcpSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder
-      // Analyze Prompt
       .addCase(analyzeInteractionPrompt.pending, (state) => {
         state.loading = true;
         state.error = null;
       })
       .addCase(analyzeInteractionPrompt.fulfilled, (state, action) => {
         state.loading = false;
-        // The backend returns: { message, status, missing_fields, data/partial_data }
         state.extractedData = action.payload.data || action.payload.partial_data || null;
         state.missingFields = action.payload.missing_fields || [];
       })
+
       .addCase(analyzeInteractionPrompt.rejected, (state, action) => {
         state.loading = false;
         state.error = action.payload;
       })
-      // Submit Interaction
       .addCase(submitInteraction.pending, (state) => {
         state.loading = true;
         state.error = null;
@@ -87,7 +85,6 @@ const hcpSlice = createSlice({
         state.loading = false;
         state.error = action.payload;
       })
-      // Fetch Interactions
       .addCase(fetchInteractions.pending, (state) => {
         state.loading = true;
         state.error = null;
