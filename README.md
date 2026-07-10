@@ -1,17 +1,99 @@
-# React + Vite
+# 🏥 AI-Powered HCP Interaction CRM
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An intelligent Healthcare CRM platform designed to manage Healthcare Professional (HCP) interactions with AI-assisted data extraction and analysis.
 
-Currently, two official plugins are available:
+The application helps pharmaceutical sales representatives and healthcare organizations efficiently record, analyze, and manage HCP interactions.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🚀 Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 👨‍⚕️ HCP Interaction Management
+- Create HCP interaction records
+- Track interaction date and time
+- Manage attendees
+- Store discussion topics
+- Maintain follow-up information
+- View historical interactions
 
-## Expanding the ESLint configuration
+### 🤖 AI Assistant
+- Extract information from natural language prompts
+- Identify missing fields automatically
+- Generate structured interaction data
+- Reduce manual data entry
+- Smart validation of required fields
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# HCP
+### 📊 Analytics
+- Interaction insights
+- Sentiment analysis
+- Product discussion tracking
+- Follow-up recommendations
+
+### 🔒 Authentication
+- Secure login system
+- User session management
+- Role-based access
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+- React.js
+- Vite
+- Redux Toolkit
+- Axios
+- CSS
+
+### Backend
+- FastAPI
+- Python
+- LangChain
+- LangSmith
+- Pydantic
+
+### Database
+- PostgreSQL
+
+### AI
+- Groq LLM
+- LangChain
+- Prompt Engineering
+
+---
+
+## 📁 Project Structure
+
+```text
+HCP/
+│
+├── public/
+│
+├── src/
+│   ├── Components/
+│   │   ├── Button.jsx
+│   │   ├── DateSelector.jsx
+│   │   ├── InputField.jsx
+│   │   ├── MultiSelect.jsx
+│   │   └── Select.jsx
+│   │
+│   ├── Page/
+│   │   ├── AIChatBot.jsx
+│   │   └── Details.jsx
+│   │
+│   ├── Redux/
+│   │   ├── ApiCall.jsx
+│   │   ├── hcpSlice.js
+│   │   └── store.js
+│   │
+│   ├── Root/
+│   │
+│   ├── App.jsx
+│   ├── main.jsx
+│   ├── router.jsx
+│   └── App.css
+│
+├── .gitignore
+├── index.html
+├── package.json
+└── README.md
