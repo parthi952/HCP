@@ -29,12 +29,6 @@ The application helps pharmaceutical sales representatives and healthcare organi
 - Product discussion tracking
 - Follow-up recommendations
 
-### 🔒 Authentication
-- Secure login system
-- User session management
-- Role-based access
-
----
 
 ## 🛠️ Tech Stack
 
